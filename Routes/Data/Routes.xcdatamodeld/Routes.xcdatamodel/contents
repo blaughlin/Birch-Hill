@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Point" representedClassName=".Point" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="parentTrail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trail" inverseName="locations" inverseEntity="Trail"/>
+    </entity>
+    <entity name="Trail" representedClassName=".Trail" syncable="YES" codeGenerationType="class">
+        <attribute name="isChecked" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="locations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Point" inverseName="parentTrail" inverseEntity="Point"/>
+    </entity>
+    <elements>
+        <element name="Point" positionX="-145.0401000976562" positionY="807.8015747070312" width="128" height="88"/>
+        <element name="Trail" positionX="-328.335205078125" positionY="757.6145629882812" width="128" height="88"/>
+    </elements>
+</model>
